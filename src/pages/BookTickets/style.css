@@ -1,0 +1,51 @@
+.book-tickets {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 120px;
+    height: 300px;
+  }
+  
+  .book-tickets h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .book-tickets form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-tickets label {
+    margin-bottom: 10px;
+  }
+  
+  .book-tickets input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  
+  .book-tickets button {
+    padding: 10px 20px;
+    background-color: #C10D4C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 120px;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  
+  .book-tickets button:hover {
+    background-color: #37DAD7;
+    font-weight: 500;
+    color: #000;
+  }
+  
