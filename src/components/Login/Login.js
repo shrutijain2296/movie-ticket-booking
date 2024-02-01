@@ -16,7 +16,7 @@ function Login() {
     }
     setErrorMsg("");
     localStorage.setItem('email', email);
-    window.location.href = "/homepage";
+    
   }
 
   return (
@@ -32,7 +32,10 @@ function Login() {
             <Form.Label className='form-label'>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" value = {password} onChange = {(e) => setPassword(e.target.value)}/>
           </Form.Group>
-          <button type="submit" className='login-btn'>Login</button>
+          <Link to = "/homepage">
+            <button type="submit" className='login-btn'>Login</button>
+          </Link>
+          
           <p className='errorMsg'>{errorMsg}</p>
         </Form>
       </div>

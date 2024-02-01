@@ -36,3 +36,16 @@
     font-weight: 500;
     border-radius: 5px;
 }
+/* Media query for tablets */
+@media only screen and (max-width: 1024px) {
+    .movie-list {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 columns on tablets */
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .movie-list {
+        grid-template-columns: repeat(1, 1fr); /* Show 1 column on mobile devices */
+    }
+}

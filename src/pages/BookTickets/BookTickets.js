@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./style.css";
 
 function BookTickets() {
@@ -34,7 +35,6 @@ function BookTickets() {
       userEmail: email,
     };
     localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
-    window.location.href = "/tickets-booked"
   };
 
   return (
@@ -56,7 +56,9 @@ function BookTickets() {
           <input type="number" id="numberOfTickets" min="1" required onChange = {(e) => setNumberOfTickets(e.target.value)} value = {numberOfTickets}/>
         </div>
         <div>
-          <button type="submit">Book Now</button>
+          <Link to = "tickets-booked">
+            <button type="submit">Book Now</button>
+          </Link>          
         </div>
       </form>
     </div>

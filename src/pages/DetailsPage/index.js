@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from '../../components/Navbar/Navbar';
 import image from "../../images/no-image.jpg";
@@ -10,12 +10,6 @@ function DetailsPage() {
   const [show, setShow] = useState(null);
   const { id } = useParams();
   
-  const handleBooking = (e) => {
-     e.preventDefault();
-    //  window.location.href = "/book-tickets"
-    window.location.href = `/book-tickets?movieName=${encodeURIComponent(show.name)}`;
-  }
-
   useEffect(() => {
       axios.get(`https://api.tvmaze.com/shows/${id}`)
          .then(response => {
@@ -43,7 +37,9 @@ function DetailsPage() {
                 <h6>Rating: {show.rating.average}*</h6>
                 <h6>Language: {show.language}</h6>
                 <h6>Genres: {show.genres}</h6>
-                <button onClick={handleBooking}>Book Tickets</button>
+                <Link to={`/book-tickets?movieName=${encodeURIComponent(show.name)}`}>
+                  <button>Book Tickets</button>
+                </Link>
             </div>            
           </div>
           <div className="summary-box">
